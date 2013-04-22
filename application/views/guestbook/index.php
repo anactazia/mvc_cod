@@ -1,5 +1,5 @@
 <div id="content">
-<a href="<?php echo site_url('guestbook'); ?>"><h1>Guestbook</h1></a>
+<h1>Gästbok</h1>
 <hr />
 <?php echo validation_errors(); ?>
 <div class="formguest">
@@ -9,7 +9,7 @@
 <article class="newspost">
 <p><?php echo $posts_item['text']; ?></p>
 <hr />
-<p class="uppercase small">Author: <em><?php echo $posts_item['author']; ?></em></p>
+<p class="uppercase small">Skribent: <em><?php echo $posts_item['author']; ?></em></p>
 </article>
 <?php endforeach; ?>
 </div>

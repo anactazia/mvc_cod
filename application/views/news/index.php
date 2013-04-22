@@ -1,7 +1,7 @@
 <div id="content">
-<?php echo heading("News", 1); ?>
+<?php echo heading("Blogg", 1); ?>
 <hr />
-<a href="news/create"><span class="postlink">Create a new post</span></a>
+<a href="news/create"><span class="postlink">Skriv i bloggen</span></a>
 <?php foreach ($news as $news_item): ?>
 
 <article class="newspost">
@@ -13,7 +13,7 @@
     </div>
     <div>
     <hr />
-    <p class="uppercase small"><a href="news/<?php echo $news_item['slug'] ?>">View article</a></p>
+    <p class="uppercase small"><a href="news/<?php echo $news_item['slug'] ?>">Visa Artikel</a></p>
     </div>
     </article>
     

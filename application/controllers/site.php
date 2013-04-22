@@ -8,24 +8,25 @@ class Site extends CI_Controller {
 }
 
 	public function home() {
-		$this->load->view("site_header");
-		$this->load->view("site_nav");
-		$this->load->view("content_home");
-		$this->load->view("site_footer");
+		$this->load->view("header");
+		$this->load->view("nav");
+		$this->load->view("home");
+		$this->load->view("footer");
 }
 
 	public function about() {
-		$this->load->view("site_header");
-		$this->load->view("site_nav");
-		$this->load->view("content_about");
-		$this->load->view("site_footer");
+		$this->load->view("header");
+		$this->load->view("nav");
+		$this->load->view("about");
+		$this->load->view("footer");
 }
 	public function contact() {
-		$this->load->view("site_header");
-		$this->load->view("site_nav");
-		$this->load->view("content_contact");
-		$this->load->view("site_footer");
+		$this->load->view("header");
+		$this->load->view("nav");
+		$this->load->view("contact");
+		$this->load->view("footer");
 }
 
-
+	
+		
 }

@@ -12,10 +12,10 @@ class News extends CI_Controller {
 	$data['news'] = $this->news_model->get_news();
 	$data['title'] = 'News archive';
 
-	$this->load->view('site_header');
-	$this->load->view('site_nav');
+	$this->load->view('header');
+	$this->load->view('nav');
 	$this->load->view('news/index', $data);
-	$this->load->view('site_footer');
+	$this->load->view('footer');
 }
 	public function view($slug)
 {
@@ -28,10 +28,10 @@ class News extends CI_Controller {
 
 	$data['title'] = $data['news_item']['title'];
 
-	$this->load->view('site_header');
-	$this->load->view('site_nav');
+	$this->load->view('header');
+	$this->load->view('nav');
 	$this->load->view('news/view', $data);
-	$this->load->view('site_footer');
+	$this->load->view('footer');
 }
 
 	public function create()
@@ -39,26 +39,26 @@ class News extends CI_Controller {
 	$this->load->helper('form');
 	$this->load->library('form_validation');
 	
-	$data['title'] = 'Create a news item';
+	$data['title'] = 'Skriv i bloggen';
 	
 	$this->form_validation->set_rules('title', 'Title', 'required');
 	$this->form_validation->set_rules('text', 'text', 'required');
 	
 	if ($this->form_validation->run() === FALSE)
 	{
-		$this->load->view('site_header');
-		$this->load->view('site_nav');
+		$this->load->view('header');
+		$this->load->view('nav');
 		$this->load->view('news/create', $data);
-		$this->load->view('site_footer');
+		$this->load->view('footer');
 		
 	}
 	else
 	{
 		$this->news_model->set_news();
-		$this->load->view('site_header');
-		$this->load->view('site_nav');
+		$this->load->view('header');
+		$this->load->view('nav');
 		$this->load->view('news/success');
-		$this->load->view('site_footer');
+		$this->load->view('footer');
 	}
 }
 }

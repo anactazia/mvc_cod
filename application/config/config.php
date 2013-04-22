@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://www.student.bth.se/~anza13/phpmvc/me/kmom03/mvc_cod';
+$config['base_url']	= 'http://www.student.bth.se/~anza13/phpmvc/me/kmom04/mvc_cod';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'O27Z11X2RWqSVm76x1JkWX2d50rMX4Y8';
 
 /*
 |--------------------------------------------------------------------------
