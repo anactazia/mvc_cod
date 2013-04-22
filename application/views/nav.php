@@ -10,6 +10,7 @@
 <a href="<?php echo base_url(); ?>index.php/news">Blogg</a>
 <a href="<?php echo base_url(); ?>index.php/news/newslist">Artiklar</a>
 <a href="<?php echo base_url(); ?>index.php/site/contact">Kontakt</a>
+<a href="<?php echo base_url(); ?>index.php/theme">Tema</a>
 <a href="http://www.student.bth.se/~anza13/phpmvc/me/<?php echo constant('KMOM'); ?>/home.php">Me-Sidan</a>
 
     </div>

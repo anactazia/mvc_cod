@@ -27,6 +27,6 @@ class Site extends CI_Controller {
 		$this->load->view("footer");
 }
 
-	
+
 		
 }

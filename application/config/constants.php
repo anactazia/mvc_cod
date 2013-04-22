@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 |
 */
-define('KMOM' , 'kmom05');
+define('KMOM' , 'kmom06');
 /*
 | These prefs are used when checking and setting modes when working
 | with the file system.  The defaults are fine on servers with proper

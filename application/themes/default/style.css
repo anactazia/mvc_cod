@@ -1,0 +1,306 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #EEE;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li,
+ul {
+  font-family: arial, sans-serif;
+  color: #000000;
+  text-decoration: none;
+}
+#nav {
+  margin: 50px auto 0 auto;
+  width: 1000px;
+  background-color: #888;
+  height: 15px;
+  padding: 20px;
+  text-transform: uppercase;
+  word-spacing: 20px;
+}
+#nav a:hover {
+  color: green;
+}
+#nav ul {
+  list-style: none;
+  text-align: center;
+  margin: 0 50px;
+}
+#nav ul li {
+  display: inline;
+}
+#content {
+  font-family: arial, sans-serif;
+  width: 1000px;
+  min-height: 445px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#footer {
+  width: 1000px;
+  height: 15 px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#footer	p {
+  color: #777;
+  text-align: center;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.small {
+  font-size: 0.8em;
+}
+.center {
+  text-align: center;
+}
+.floatright {
+  float: right;
+}
+.floatleft {
+  float: left;
+}
+.left {
+  text-align: left;
+}
+.left {
+  text-align: right;
+}
+.bold {
+  font-weight: bold;
+}
+.formnews {
+  margin-left: 350px;
+}
+.newspost {
+  background-color: #ffffff;
+  margin-left: 200px;
+  width: 600px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.postlink {
+  text-transform: uppercase;
+  margin-left: 445px;
+  font-size: 0.8em;
+}
+.newstextarea {
+  width: 300px;
+  height: 150px;
+}
+.newsinput {
+  width: 300px;
+}
+.newssubmit {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+.newslabel {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+.post {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  padding: 20px;
+}
+.posttext {
+  min-height: 250px;
+}
+.postlist {
+  width: 650px;
+  margin-left: 200px;
+  padding-right: 30px;
+}
+.td1 {
+  width: 230px;
+}
+.td2 {
+  width: 70px;
+}
+.td3 {
+  width: 50px;
+}
+.td4 {
+  width: 50px;
+}
+.td5 {
+  width: 50px;
+}
+.formguest {
+  margin-left: 340px;
+}
+.gravatar {
+  height: 70px;
+  border: 3px solid #000000;
+  margin-bottom: -3px;
+}
+.menudiv1 {
+  float: left;
+}
+.menudiv2 {
+  position: relative;
+  float: left;
+  margin-top: -19px;
+  margin-right: 0px;
+  width: 353px;
+  text-align: right;
+}
+.menudiv3 {
+  float: right;
+  margin-top: -30px;
+}
+.menudiv4 {
+  float: right;
+}
+.nickname {
+  text-transform: uppercase;
+  margin-right: -95px;
+  margin-top: -30px;
+  font-size: 0.9em;
+  float: right;
+  text-align: center;
+  width: 80px;
+}
+.logout {
+  text-transform: uppercase;
+  margin-left: 12px;
+  font-size: 0.8em;
+}
+.loginform {
+  margin-top: 10px;
+  float: right;
+  margin-right: 370px;
+  text-align: right;
+  border: 2px solid #888;
+  width: 220px;
+  height: 80px;
+  padding: 20px;
+  padding-top: 30px;
+}
+.loginlabel {
+  padding-right: 10px;
+}
+.loginrows {
+  margin-top: -10px;
+}
+.loginsubmit {
+  margin-top: -10px;
+  margin-right: 80px;
+}
+.logincreate {
+  margin-top: 163px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+.loginmessage {
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+.loginerror {
+  margin-top: 163px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+.signupform {
+  margin-top: 10px;
+  float: right;
+  margin-right: 330px;
+  text-align: right;
+  border: 2px solid #888;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  padding-top: 30px;
+}
+.signuplabel {
+  padding-right: 10px;
+}
+.signuprows {
+  margin-top: -10px;
+}
+.signupsubmit {
+  margin-top: -30px;
+  margin-right: 68px;
+}
+.signupmessage {
+  margin-top: 163px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+.signuperror {
+  margin-top: 190px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+.profileform {
+  margin-top: 10px;
+  float: right;
+  margin-right: 330px;
+  text-align: right;
+  border: 2px solid #888;
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  padding-top: 30px;
+}
+.profilelabel {
+  padding-right: 10px;
+  float: left;
+}
+.profilerows {
+  margin-top: -10px;
+  height: 20px;
+  padding: 1px;
+}
+.profilerows2 {
+  margin-top: -8px;
+  height: 20px;
+  padding: 1px;
+}
+.profilesubmit {
+  margin-top: -8px;
+  margin-right: 75px;
+}
+.profilemessage {
+  margin-top: 220px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+.profileerror {
+  margin-top: 210px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+.userdetails {
+  margin-left: 350px;
+}
+td {
+  padding: 3px;
+}

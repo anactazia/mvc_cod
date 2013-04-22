@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://www.student.bth.se/~anza13/phpmvc/me/kmom05/mvc_cod';
+$config['base_url']	= 'http://www.student.bth.se/~anza13/phpmvc/me/kmom06/mvc_cod';
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +27,28 @@ $config['base_url']	= 'http://www.student.bth.se/~anza13/phpmvc/me/kmom05/mvc_co
 |
 */
 $config['index_page'] = '';
+
+/*
+|--------------------------------------------------------------------------
+| Settings for the Theme
+|--------------------------------------------------------------------------
+| 
+*/
+function theme(){
+	
+// Name of the theme you want to use:	
+$theme = 'grid';
+
+echo $theme;
+}
+
+function stylesheet(){
+// Name of the stylesheet you want to use:
+$stylesheet = 'style.php';
+
+echo $stylesheet;
+}
+
 
 /*
 |--------------------------------------------------------------------------
