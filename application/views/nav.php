@@ -8,6 +8,7 @@
 <a href="<?php echo base_url(); ?>index.php/site/about">Om</a>
 <a href="<?php echo base_url(); ?>index.php/guestbook">Gästbok</a>
 <a href="<?php echo base_url(); ?>index.php/news">Blogg</a>
+<a href="<?php echo base_url(); ?>index.php/news/newslist">Artiklar</a>
 <a href="<?php echo base_url(); ?>index.php/site/contact">Kontakt</a>
 <a href="http://www.student.bth.se/~anza13/phpmvc/me/<?php echo constant('KMOM'); ?>/home.php">Me-Sidan</a>
 
@@ -25,8 +26,16 @@ $gravatar = "<img class='gravatar' src='http://www.gravatar.com/avatar/$hash.jpg
     ?>
     <div class="menudiv2">
     
-    <a href="<?php echo base_url(); ?>index.php/user/profile"><?php echo $this->session->userdata('email'); ?></a><br />
-    <a href="<?php echo base_url(); ?>index.php/user/members">Medlemssida</a>
+    <a href="<?php echo base_url(); ?>index.php/user/profile"><span class='nickname'><?php echo $this->session->userdata('nickname'); ?></span></a><br />
+    <?php if($this->session->userdata('role') == 'admin') {?>
+    <a href="<?php echo base_url(); ?>index.php/user/adminindex">Start</a>
+    <a href="<?php echo base_url(); ?>index.php/news/create">Inlägg</a>
+    <a href="<?php echo base_url(); ?>index.php/user/adminedit">Admin</a>
+    <?php } else { ?>
+    <a href="<?php echo base_url(); ?>index.php/user/userindex">Start</a>
+    <a href="<?php echo base_url(); ?>index.php/news/create">Inlägg</a>
+    <?php } ?>	    
+    
     </div>
     <div class="menudiv3">
     <a href="<?php echo base_url(); ?>index.php/user/profile"><?php echo $gravatar; ?></a><br />

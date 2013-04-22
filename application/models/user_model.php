@@ -54,9 +54,7 @@ class User_Model extends CI_Model {
   	  	  	  return $data['email'];
   }	return false;}
   
-  
+ 
 
-  
-  	  
 }
 ?>

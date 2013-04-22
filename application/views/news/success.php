@@ -1,4 +1,4 @@
 <div id="content">
-<p class="center">A new post has been added to News!</p>
-<a href="index"><p class="center uppercase small">Go back to News Page</p></a>
+<p class="center">Inlägget har postats!</p>
+<a href="<?php echo base_url(); ?>index.php/news/create"><p class="center uppercase small">Skriv ett nytt inlägg</p></a>
 </div>

@@ -26,12 +26,36 @@ class User extends CI_Controller{
 	$this->load->view('footer');
   }
 
-  public function members() {
+  public function adminindex() {
 		
 	if($this->session->userdata('is_logged_in')) {	
 	$this->load->view('header');
 	$this->load->view('nav');
-	$this->load->view('user/members');
+	$this->load->view('user/adminindex');
+	$this->load->view('footer');
+	} else {
+	redirect('index.php/user/restricted');
+	}
+  }
+  
+  public function adminedit() {
+		
+	if($this->session->userdata('is_logged_in') && $this->session->userdata('role') == 'admin') {	
+	$this->load->view('header');
+	$this->load->view('nav');
+	$this->load->view('user/adminedit');
+	$this->load->view('footer');
+	} else {
+	redirect('index.php/user/restricted');
+	}
+  }  
+  
+    public function userindex() {
+		
+	if($this->session->userdata('is_logged_in')) {	
+	$this->load->view('header');
+	$this->load->view('nav');
+	$this->load->view('user/userindex');
 	$this->load->view('footer');
 	} else {
 	redirect('index.php/user/restricted');
@@ -84,12 +108,28 @@ class User extends CI_Controller{
 	$this->form_validation->set_message('required', "Dina uppgifter stämmer inte!");
 	
 	if ($this->form_validation->run()) {
-		
-		$data = array( 
-				'email' => $this->input->post('email'),
-				'is_logged_in' => 1);
+		$email = $this->input->post('email');
+		$this->db->where('email', $email);
+		$user = $this->db->get('cod_users');
+
+
+		$row = $user->row();
+		$role = $row->role;
+  	  	  
+  	  	  $data = array(
+  	  	  	  'userid' => $row->userid,
+  	  	  	  'name' => $row->name,
+  	  	  	  'nickname' => $row->nickname,
+  	  	  	  'email' => $this->input->post('email'),
+  	  	  	  'password' => $row->password,
+  	  	  	  'role' => $row->role,
+  	  	  	  'is_logged_in' => 1
+  	  	  	  );
+				
+				
 		$this->session->set_userdata($data);
-		redirect('index.php/user/members');
+		if($role == 'admin') {redirect('index.php/user/adminindex');}
+		else {redirect('index.php/user/userindex');}
 		} else {
 		$this->session->set_flashdata('message', 'Något blev fel, försök igen!');
 			  			    redirect('index.php/user/login');}
@@ -102,6 +142,7 @@ class User extends CI_Controller{
 	
   	$this->load->library('form_validation'); 
 			
+  	$this->form_validation->set_rules('nickname', 'Användarnamn', 'trim|required|min_length[4]|max_length[9]|xss_clean');
 	$this->form_validation->set_rules('email', 'E-Mail', 'required|trim|valid_email|is_unique[cod_users.email]');
 	$this->form_validation->set_rules('password', 'Lösenord','required|trim');
 	$this->form_validation->set_rules('cpassword', 'Bekräfta Lösenord', 'required|trim|matches[password]');
@@ -154,9 +195,10 @@ class User extends CI_Controller{
   	$this->load->library('form_validation'); 
   	$this->load->model('user_model');
   	
-			
+  	$this->form_validation->set_rules('nickname', 'Användarnamn', 'trim|required|min_length[4]|max_length[9]|xss_clean');			
 	$this->form_validation->set_rules('email', 'E-Mail', 'required|trim|valid_email');
 	$this->form_validation->set_rules('password', 'Lösenord','required|trim');
+	$this->form_validation->set_rules('cpassword', 'Bekräfta Lösenord', 'required|trim|matches[password]');
 	
 	
 
@@ -170,7 +212,6 @@ class User extends CI_Controller{
 				'nickname' => $this->input->post('nickname'),
 				'email' => $this->input->post('email'),
 				'password' => md5($this->input->post('password')),
-	
 		
 				);
 		
@@ -238,4 +279,4 @@ class User extends CI_Controller{
   
    	  
   
-}  
+}

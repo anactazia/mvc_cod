@@ -7,7 +7,7 @@ class Guestbook_model extends CI_Model {
   }
  
   public function get_posts() {
-    $query = $this->db->get('cod_posts');
+    $query = $this->db->get('cod_guestbook');
     return $query->result_array();
   }
  
@@ -18,7 +18,7 @@ class Guestbook_model extends CI_Model {
     );
     $data = $this->security->xss_clean($data);
  
-   return $this->db->insert('cod_posts', $data);
+   return $this->db->insert('cod_guestbook', $data);
   }
  
 }
